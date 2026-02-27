@@ -201,7 +201,10 @@ function App() {
 
   return (
     <div className={`terminal ${isMcpActive ? 'mcp-alert' : ''}`}>
-      <div className="scan-line"></div>
+      <div className="terminal-effects">
+        <div className="scan-line"></div>
+        <div className="crt-overlay"></div>
+      </div>
       <div className="terminal-header">
         <span>NULL_NODE://TTY0</span>
         <span>{isMcpActive ? '!! KERNEL_ALERT !!' : '[SYNC: OK]'}</span>

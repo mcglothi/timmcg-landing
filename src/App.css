@@ -9,10 +9,25 @@
   background: #000;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.terminal:hover {
+  box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.2), 0 0 15px rgba(0, 255, 0, 0.1);
+}
+
+.terminal-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* CRT Scanline Effect */
-.terminal::before {
+.crt-overlay::before {
   content: "";
   position: absolute;
   top: 0;
@@ -30,12 +45,10 @@
     rgba(0, 0, 255, 0.06)
   );
   background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* CRT Flickering */
-.terminal::after {
+.crt-overlay::after {
   content: "";
   position: absolute;
   top: 0;
@@ -44,9 +57,7 @@
   height: 100%;
   background: rgba(18, 16, 16, 0.1);
   opacity: 0;
-  pointer-events: none;
   animation: flicker 4s infinite;
-  z-index: 2;
 }
 
 @keyframes flicker {
@@ -86,9 +97,7 @@
     rgba(0, 0, 0, 0) 100%
   );
   opacity: 0.1;
-  pointer-events: none;
   animation: scan 8s linear infinite;
-  z-index: 3;
 }
 
 @keyframes scan {
@@ -118,6 +127,7 @@
   position: relative;
   z-index: 10;
 }
+
 
 /* Hide scrollbar */
 .terminal-content::-webkit-scrollbar {
