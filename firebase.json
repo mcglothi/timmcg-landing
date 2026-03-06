@@ -1,20 +1,34 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "redirects": [
+      {
+        "source": "/v2",
+        "destination": "/",
+        "type": 301
+      },
       {
         "source": "/v2/**",
-        "destination": "/v2/index.html"
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/v3",
+        "destination": "/",
+        "type": 301
       },
       {
         "source": "/v3/**",
-        "destination": "/v2/index.html"
-      },
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
