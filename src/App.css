@@ -126,8 +126,27 @@
   overflow-y: auto;
   position: relative;
   z-index: 10;
+  color: #00ff00; /* Solid green text */
+  background: transparent;
 }
 
+.terminal-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #002200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #004400;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 10;
+}
+
+.terminal-footer span {
+  opacity: 0.6;
+}
 
 /* Hide scrollbar */
 .terminal-content::-webkit-scrollbar {

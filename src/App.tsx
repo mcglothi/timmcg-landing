@@ -233,6 +233,10 @@ function App() {
           </div>
         )}
       </div>
+      <div className="terminal-footer">
+        <span>v1.0.4</span>
+        <span>{new Date().toISOString().replace('T', ' ').substring(0, 19)} UTC</span>
+      </div>
     </div>
   )
 }
