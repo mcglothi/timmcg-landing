@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>timmcg-v2</title>
-    <script type="module" crossorigin src="/assets/index-Lh9glitch6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-jXsjnmwc.css">
+    <title>timmcg.net // loading</title>
+    <script type="module" crossorigin src="/assets/index-Lh9glitch19.js"></script>
+    <script>
+      (function () {
+        var script = document.querySelector('script[src*="/assets/index-"]')
+        var match = script && script.getAttribute("src") && script.getAttribute("src").match(/index-([^.]+)\.js/)
+        var version = match ? match[1] : "unknown"
+        document.title = "timmcg.net // " + version
+      })()
+    </script>
+    <link rel="stylesheet" crossorigin href="/assets/index-jXsjnmwc-v6.css">
   </head>
   <body>
     <div id="root"></div>
